@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class healthScript : MonoBehaviour
 {
+
+    public int MaxHealth;
+    public int currentHealth;
+
     // Start is called before the first frame update
     void Start()
     {
