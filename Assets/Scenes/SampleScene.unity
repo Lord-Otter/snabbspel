@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 306174723}
   - component: {fileID: 306174722}
+  - component: {fileID: 306174726}
   - component: {fileID: 306174725}
   - component: {fileID: 306174724}
   m_Layer: 0
@@ -218,7 +218,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306174721}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -265,7 +265,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00014027953, y: -0.0003992319}
@@ -281,6 +281,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6522848, y: 0.9719012}
   m_EdgeRadius: 0
+--- !u!114 &306174726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306174721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2877a49311396624e8ae4e3b46a0361f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  damage: 3
+  bounces: 0
 --- !u!1 &324156135
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200081457}
   - component: {fileID: 1200081456}
+  - component: {fileID: 1200081460}
   - component: {fileID: 1200081459}
   - component: {fileID: 1200081458}
   m_Layer: 0
@@ -868,7 +884,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200081455}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -882,9 +898,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &1200081459
 BoxCollider2D:
@@ -915,7 +931,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0006554127, y: 0.0055299997}
@@ -931,6 +947,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6653085, y: 0.66485286}
   m_EdgeRadius: 0
+--- !u!114 &1200081460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200081455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2877a49311396624e8ae4e3b46a0361f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  damage: 4
+  bounces: 2
 --- !u!1 &1237101770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1043,7 @@ Transform:
   m_GameObject: {fileID: 1237101770}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0.04, y: 2.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1027,7 +1058,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237101770}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -1041,9 +1072,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &1237101774
 BoxCollider2D:
@@ -1102,8 +1133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e04a6c9cb7d504b99ca4030526d572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 0
-  currentHealth: 0
+  health: 0
+  maxHealth: 10
 --- !u!1 &1262166600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,7 +1360,6 @@ GameObject:
   - component: {fileID: 1798312408}
   - component: {fileID: 1798312407}
   - component: {fileID: 1798312409}
-  - component: {fileID: 1798312413}
   - component: {fileID: 1798312414}
   - component: {fileID: 1798312411}
   m_Layer: 0
@@ -1431,13 +1461,13 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798312406}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1449,20 +1479,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1798312413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798312406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1e04a6c9cb7d504b99ca4030526d572, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 0
-  currentHealth: 0
 --- !u!61 &1798312414
 BoxCollider2D:
   m_ObjectHideFlags: 0
