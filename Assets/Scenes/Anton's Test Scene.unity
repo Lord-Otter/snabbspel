@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 1492984481}
+  - {fileID: 586133009}
   - {fileID: 586133009}
   - {fileID: 443457196}
   enemy: {fileID: 4723081839494830117, guid: 2b22fdbe840b4d44ebc7c81f59d9dbed, type: 3}
@@ -1606,8 +1606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e04a6c9cb7d504b99ca4030526d572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 0
-  currentHealth: 0
+  health: 0
+  maxHealth: 0
 --- !u!61 &1798312414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1725,6 +1725,6 @@ SceneRoots:
   - {fileID: 324156137}
   - {fileID: 747215518}
   - {fileID: 657884042}
-  - {fileID: 1492984481}
   - {fileID: 586133009}
   - {fileID: 443457196}
+  - {fileID: 2272068260554317901}
