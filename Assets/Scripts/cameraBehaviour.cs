@@ -26,19 +26,15 @@ public class camerBehaviour : MonoBehaviour
 
         Vector3 directionToMouse = worldMousePos - player.position;
 
-        // Apply mouse influence to the x and y directions separately
         Vector3 desiredPosition = player.position + offset;
 
         if (mouseInfluence > 0f)
         {
-            // Scale the mouse influence differently for the y-axis
             desiredPosition = Vector3.Lerp(player.position + offset, player.position + new Vector3(directionToMouse.x, directionToMouse.y * yMouseBias, directionToMouse.z), mouseInfluence);
         }
 
-        // Preserve the initial z offset
         desiredPosition.z = player.position.z + initialOffset.z;
 
-        // Ensure the camera doesn't go too far from the player
         float distanceFromPlayer = Vector3.Distance(player.position, desiredPosition);
 
         if (distanceFromPlayer > maxDistance)
@@ -49,7 +45,6 @@ public class camerBehaviour : MonoBehaviour
 
         transform.position = desiredPosition;
 
-        // Lock rotation to identity (no rotation)
         transform.rotation = Quaternion.identity;
     }
 }

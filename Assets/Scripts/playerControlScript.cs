@@ -36,9 +36,6 @@ public class playerControlScript : MonoBehaviour
             }
 
             transform.Translate(movement * movementSpeed * Time.deltaTime, Space.World);
-
-            /*Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.rotation = Quaternion.LookRotation(new Vector3 (0, 0, 1), mousePosition - transform.position);*/
         }
     }
 }
