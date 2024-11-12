@@ -7,7 +7,7 @@ public class playerControlScript : MonoBehaviour
     
     // Player Movement
     public float movementSpeed;
-    public bool CanMove = true;
+    public bool canMove = true;
     public bool canDodge = true;
     public bool canShoot = true;
 
@@ -23,7 +23,7 @@ public class playerControlScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CanMove)
+        if (canMove)
         {
             float inputX = Input.GetAxisRaw("Horizontal");
             float inputY = Input.GetAxisRaw("Vertical");
@@ -37,8 +37,8 @@ public class playerControlScript : MonoBehaviour
 
             transform.Translate(movement * movementSpeed * Time.deltaTime, Space.World);
 
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.rotation = Quaternion.LookRotation(new Vector3 (0, 0, 1), mousePosition - transform.position);
+            /*Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.rotation = Quaternion.LookRotation(new Vector3 (0, 0, 1), mousePosition - transform.position);*/
         }
     }
 }
