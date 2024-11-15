@@ -212,7 +212,7 @@ Transform:
   m_GameObject: {fileID: 495463877}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.93, y: -6.34, z: 0}
+  m_LocalPosition: {x: 4.93, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -270,8 +270,8 @@ MonoBehaviour:
   - {fileID: 844163270}
   - {fileID: 495463878}
   enemy: {fileID: 1941869251}
-  spawnTime: 7
-  spawnDelay: 3
+  spawnTime: 1
+  spawnDelay: 1
   spawnLimit: 3
 --- !u!1 &844163269
 GameObject:
@@ -298,7 +298,7 @@ Transform:
   m_GameObject: {fileID: 844163269}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.77, y: -6.34, z: 0}
+  m_LocalPosition: {x: 2.77, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -344,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 2025657872}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -6.34, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
