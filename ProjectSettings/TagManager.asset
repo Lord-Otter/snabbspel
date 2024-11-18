@@ -10,6 +10,7 @@ TagManager:
   - Weapon_Primary
   - Weapon_Secondary
   - Weapon_Melee
+  - Wall
   layers:
   - Default
   - TransparentFX
