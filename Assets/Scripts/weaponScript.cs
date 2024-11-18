@@ -8,6 +8,7 @@ public class weaponScript : MonoBehaviour
     public GameObject projectile;
     public int numberOfProjectiles;
     public float fireSpread;
+    public bool evenSpread = false;
     private float nextShot = 0;
     public float fireDelay = 0.5f;
     public bool holdToShoot = false;
@@ -35,10 +36,24 @@ public class weaponScript : MonoBehaviour
     {
         for (int i = 0; i < numberOfProjectiles; i++)
         {
-            Instantiate(projectile, transform.position, transform.rotation);
+            Quaternion rotation;
+
+            if (evenSpread == false)
+            {
+                rotation = transform.rotation * Quaternion.Euler(0, 0, Random.Range(fireSpread / 2, -fireSpread / 2));
+            }
+            else
+            {
+                float angleStep = fireSpread / (numberOfProjectiles - 1);
+                float angle = -fireSpread / 2 + i * angleStep;
+                rotation = transform.rotation * Quaternion.Euler(0, 0, angle);
+            }
+
+            Instantiate(projectile, transform.position, rotation);
         }
 
         nextShot = Time.time + fireDelay;
     }
+
 }
 
