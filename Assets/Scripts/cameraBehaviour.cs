@@ -7,7 +7,7 @@ public class camerBehaviour : MonoBehaviour
     public Transform player;
     public Vector3 offset;
     public float mouseInfluence = 0f;
-    public float yMouseBias = 1.5f;
+    public float yAxisBias = 1.5f;
     public float maxDistance = 10f;
 
     private Vector3 initialOffset;
@@ -26,24 +26,24 @@ public class camerBehaviour : MonoBehaviour
 
         Vector3 directionToMouse = worldMousePos - player.position;
 
-        Vector3 desiredPosition = player.position + offset;
+        Vector3 cameraPosition = player.position + offset;
 
         if (mouseInfluence > 0f)
         {
-            desiredPosition = Vector3.Lerp(player.position + offset, player.position + new Vector3(directionToMouse.x, directionToMouse.y * yMouseBias, directionToMouse.z), mouseInfluence);
+            cameraPosition = Vector3.Lerp(player.position + offset, player.position + new Vector3(directionToMouse.x, directionToMouse.y * yAxisBias, directionToMouse.z), mouseInfluence);
         }
 
-        desiredPosition.z = player.position.z + initialOffset.z;
+        cameraPosition.z = player.position.z + initialOffset.z;
 
-        float distanceFromPlayer = Vector3.Distance(player.position, desiredPosition);
+        float distanceFromPlayer = Vector3.Distance(player.position, cameraPosition);
 
         if (distanceFromPlayer > maxDistance)
         {
-            Vector3 direction = (desiredPosition - player.position).normalized;
-            desiredPosition = player.position + direction * maxDistance;
+            Vector3 direction = (cameraPosition - player.position).normalized;
+            cameraPosition = player.position + direction * maxDistance;
         }
 
-        transform.position = desiredPosition;
+        transform.position = cameraPosition;
 
         transform.rotation = Quaternion.identity;
     }

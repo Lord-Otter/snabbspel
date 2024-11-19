@@ -36,7 +36,7 @@ public class healthManager : MonoBehaviour
 
                 if (this.CompareTag("Player"))
                 {
-                    Destroy(this.gameObject);
+                    Destroy(this.gameObject); //The player is not supposed to be desroyed
                 }
             }
         }

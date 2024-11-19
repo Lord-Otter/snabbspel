@@ -22,13 +22,22 @@ public class weaponScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time > nextShot)
+        if (this.CompareTag("Weapon_Friendly"))
         {
-            Shoot();          
+
+            if (Input.GetButtonDown("Fire1") && Time.time > nextShot)
+            {
+                Shoot();
+            }
+            if (Input.GetButton("Fire1") && Time.time > nextShot && holdToShoot == true)
+            {
+                Shoot();
+            }
         }
-        if (Input.GetButton("Fire1") && Time.time > nextShot && holdToShoot == true)
+
+        if (this.CompareTag("Weapon_Hostile"))
         {
-            Shoot();
+
         }
     }
 

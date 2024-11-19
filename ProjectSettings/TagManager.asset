@@ -7,10 +7,9 @@ TagManager:
   - Enemy
   - Projectile_Friendly
   - Projectile_Hostile
-  - Weapon_Primary
-  - Weapon_Secondary
-  - Weapon_Melee
   - Wall
+  - Weapon_Friendly
+  - Weapon_Hostile
   layers:
   - Default
   - TransparentFX
