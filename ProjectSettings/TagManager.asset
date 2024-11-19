@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Weapon_Friendly
   - Weapon_Hostile
+  - Slash
   layers:
   - Default
   - TransparentFX

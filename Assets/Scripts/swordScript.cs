@@ -4,12 +4,13 @@ using UnityEngine;
 public class swordScript : MonoBehaviour
 {
     public GameObject slash;
+    public Transform slashSpawnPoint;  // Reference to the spawn point
     private float nextShot = 0;
-    public float fireDelay = 0.5f;
-    public bool holdToShoot = false;
+    public float fireDelay = 1f;
+    public bool holdToShoot = true;
 
-    public float holdTime = 2f;
-    public float slideTime = 3f;
+    public float swordHoldTime = 0.2f;
+    public float swordResetTime = 0.5f;
     public Vector3 targetPosition = new Vector3(-1.2f, 0.3f, 0f);
     public Vector3 targetRotation = new Vector3(0f, 0f, 40f);
 
@@ -38,27 +39,27 @@ public class swordScript : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(slash, transform.position, transform.rotation);
+        // Use the position and rotation of the Slash_Spawn_Point to spawn the slash
+        Instantiate(slash, slashSpawnPoint.position, slashSpawnPoint.rotation);
 
-        Transform childTransform = transform.GetChild(0);
-
-        StartCoroutine(TeleportAndReturn(childTransform));
+        Transform swordSprite = transform.GetChild(0);
+        StartCoroutine(SlashAnimation(swordSprite));
 
         nextShot = Time.time + fireDelay;
     }
 
-    IEnumerator TeleportAndReturn(Transform childTransform)
+    IEnumerator SlashAnimation(Transform childTransform)
     {
         childTransform.localPosition = targetPosition;
         childTransform.localRotation = Quaternion.Euler(targetRotation);
 
-        yield return new WaitForSeconds(holdTime);
+        yield return new WaitForSeconds(swordHoldTime);
 
         float elapsedTime = 0f;
-        while (elapsedTime < slideTime)
+        while (elapsedTime < swordResetTime)
         {
-            childTransform.localPosition = Vector3.Lerp(childTransform.localPosition, originalPosition, elapsedTime / slideTime);
-            childTransform.localRotation = Quaternion.Lerp(childTransform.localRotation, originalRotation, elapsedTime / slideTime);
+            childTransform.localPosition = Vector3.Lerp(childTransform.localPosition, originalPosition, elapsedTime / swordResetTime);
+            childTransform.localRotation = Quaternion.Lerp(childTransform.localRotation, originalRotation, elapsedTime / swordResetTime);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
@@ -67,4 +68,5 @@ public class swordScript : MonoBehaviour
         childTransform.localRotation = originalRotation;
     }
 }
+
 
