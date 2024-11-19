@@ -37,7 +37,10 @@ public class weaponScript : MonoBehaviour
 
         if (this.CompareTag("Weapon_Hostile"))
         {
-
+            if (CompareTag("player"))
+            {
+                Shoot();
+            }
         }
     }
 

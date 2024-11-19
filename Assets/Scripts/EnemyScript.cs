@@ -14,6 +14,7 @@ public class EnemyScript : MonoBehaviour
     public float fireRate;
     public GameObject projectile;
     public float Direct;
+    public GameObject currentWeapon;
     
     void Start()
     {
@@ -45,6 +46,11 @@ public class EnemyScript : MonoBehaviour
 
             StartCoroutine(pang());
         }
+        if(currentWeapon != null)
+        {
+
+        }
+
     }
     IEnumerator pang() 
     {
