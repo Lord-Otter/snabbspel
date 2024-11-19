@@ -22,9 +22,13 @@ public class EnemyScript : MonoBehaviour
     
     void Update()
     {
-        //int fixedZ = 0;
-        transform.LookAt(new Vector3(Player.position.x, Player.position.y, 1), new Vector3(0,0,1));
-        //transform.LookAt(Player, new Vector3(0,-90,0));
+        Vector3 direction = Player.position - transform.position;
+        direction.z = 0;
+        if (direction != Vector3.zero)
+        {
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        }
         float dist = Vector3.Distance(Player.position, transform.position);
         if (dist > 5)
         {
