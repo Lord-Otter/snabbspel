@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4141167761905007303}
+  - component: {fileID: -6153336500965486829}
   - component: {fileID: 1083616936597002502}
   m_Layer: 0
   m_Name: Weapon_Pistol
-  m_TagString: Weapon_Primary
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +33,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6153336500965486829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2614905030088351190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d9f118524049b419d1df5a778ecbc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1303534577872716816, guid: 8ea3dfcf423b1374cb828cc93c28bfb4, type: 3}
+  numberOfProjectiles: 1
+  fireSpread: 15
+  evenSpread: 0
+  fireDelay: 0.2
+  holdToShoot: 0
 --- !u!212 &1083616936597002502
 SpriteRenderer:
   m_ObjectHideFlags: 0

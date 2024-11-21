@@ -35,7 +35,6 @@ public class projectileFriendlyScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the object hit is an enemy
         if (other.CompareTag("Enemy"))
         {
             healthManager healthManager = other.GetComponent<healthManager>();
@@ -44,7 +43,14 @@ public class projectileFriendlyScript : MonoBehaviour
                 healthManager.takeDamage(damage);
             }
 
-            // Destroy the projectile
+            Destroy(gameObject);
+        }
+        
+        if (other.CompareTag("Wall"))
+        {
+            bounces--;
+
+
             Destroy(gameObject);
         }
     }

@@ -8,7 +8,7 @@ public class weaponScript : MonoBehaviour
     public GameObject projectile;
     public int numberOfProjectiles;
     public float fireSpread;
-    public bool randomSpread;
+    public bool evenSpread = false;
     private float nextShot = 0;
     public float fireDelay = 0.5f;
     public bool holdToShoot = false;
@@ -22,13 +22,25 @@ public class weaponScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time > nextShot)
+        if (this.CompareTag("Weapon_Friendly"))
         {
-            Shoot();          
+
+            if (Input.GetButtonDown("Fire1") && Time.time > nextShot)
+            {
+                Shoot();
+            }
+            if (Input.GetButton("Fire1") && Time.time > nextShot && holdToShoot == true)
+            {
+                Shoot();
+            }
         }
-        if (Input.GetButton("Fire1") && Time.time > nextShot && holdToShoot == true)
+
+        if (this.CompareTag("Weapon_Hostile"))
         {
-            Shoot();
+            if (CompareTag("player"))
+            {
+                Shoot();
+            }
         }
     }
 
@@ -36,10 +48,24 @@ public class weaponScript : MonoBehaviour
     {
         for (int i = 0; i < numberOfProjectiles; i++)
         {
-            Instantiate(projectile, transform.position, transform.rotation);
+            Quaternion rotation;
+
+            if (evenSpread == false)
+            {
+                rotation = transform.rotation * Quaternion.Euler(0, 0, Random.Range(fireSpread / 2, -fireSpread / 2));
+            }
+            else
+            {
+                float angleStep = fireSpread / (numberOfProjectiles - 1);
+                float angle = -fireSpread / 2 + i * angleStep;
+                rotation = transform.rotation * Quaternion.Euler(0, 0, angle);
+            }
+
+            Instantiate(projectile, transform.position, rotation);
         }
 
         nextShot = Time.time + fireDelay;
     }
+
 }
 

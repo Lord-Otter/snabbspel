@@ -47,5 +47,10 @@ public class projectileScript : MonoBehaviour
             // Destroy the projectile
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("Slash"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
