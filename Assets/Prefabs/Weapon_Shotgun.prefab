@@ -48,9 +48,9 @@ MonoBehaviour:
   projectile: {fileID: 4555104513835039650, guid: 83bfe3403ebe1b0459d7d6b5fb829f7c, type: 3}
   numberOfProjectiles: 7
   fireSpread: 45
-  evenSpread: 0
+  evenSpread: 1
   fireDelay: 0.9
-  holdToShoot: 0
+  holdToShoot: 1
 --- !u!212 &8570564723896560387
 SpriteRenderer:
   m_ObjectHideFlags: 0

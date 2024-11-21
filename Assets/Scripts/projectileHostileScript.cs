@@ -52,5 +52,10 @@ public class projectileScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

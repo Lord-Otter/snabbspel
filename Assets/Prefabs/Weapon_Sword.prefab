@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5793775019210744509}
-  - component: {fileID: 7170861688404799089}
   - component: {fileID: 1919964914256695113}
   m_Layer: 0
   m_Name: Sword_Visual
@@ -64,18 +63,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 537226473642769916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40}
---- !u!114 &7170861688404799089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7551545620929096707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2a98e89eb60f44cb5a5a7549e57666, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1919964914256695113
 SpriteRenderer:
   m_ObjectHideFlags: 0

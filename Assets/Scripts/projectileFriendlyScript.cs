@@ -48,9 +48,6 @@ public class projectileFriendlyScript : MonoBehaviour
         
         if (other.CompareTag("Wall"))
         {
-            bounces--;
-
-
             Destroy(gameObject);
         }
     }

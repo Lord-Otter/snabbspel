@@ -37,14 +37,14 @@ public class weaponScript : MonoBehaviour
 
         if (this.CompareTag("Weapon_Hostile"))
         {
-            if (CompareTag("player"))
+            /*if (CompareTag("player"))
             {
                 Shoot();
-            }
+            }*/
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         for (int i = 0; i < numberOfProjectiles; i++)
         {

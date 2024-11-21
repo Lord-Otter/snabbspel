@@ -49,8 +49,8 @@ MonoBehaviour:
   numberOfProjectiles: 1
   fireSpread: 15
   evenSpread: 0
-  fireDelay: 0.2
-  holdToShoot: 0
+  fireDelay: 4
+  holdToShoot: 1
 --- !u!212 &1083616936597002502
 SpriteRenderer:
   m_ObjectHideFlags: 0
