@@ -8,6 +8,7 @@ public class weaponScript : MonoBehaviour
     public GameObject projectile;
     public int numberOfProjectiles;
     public float fireSpread;
+    public bool randomSpread;
     private float nextShot = 0;
     public float fireDelay = 0.5f;
     public bool holdToShoot = false;

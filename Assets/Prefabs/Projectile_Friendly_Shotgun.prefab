@@ -102,7 +102,7 @@ MonoBehaviour:
   speed: 20
   damage: 3
   knockback: 0
-  range: 7
+  range: 5
   bounces: 0
   rangeAfterBounce: 0
 --- !u!61 &2422835610972390816
