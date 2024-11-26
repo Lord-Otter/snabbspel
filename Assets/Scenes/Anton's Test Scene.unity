@@ -586,9 +586,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Weapon_Friendly
       objectReference: {fileID: 0}
+    - target: {fileID: 6106904723721753783, guid: b7143d2bdfd83c54cac7e4625bd02f2a, type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7715676574681077698, guid: b7143d2bdfd83c54cac7e4625bd02f2a, type: 3}
       propertyPath: m_TagString
       value: Weapon_Friendly
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353418696329707769, guid: b7143d2bdfd83c54cac7e4625bd02f2a, type: 3}
+      propertyPath: fireDelay
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8568893448836443362, guid: b7143d2bdfd83c54cac7e4625bd02f2a, type: 3}
       propertyPath: m_LocalPosition.x

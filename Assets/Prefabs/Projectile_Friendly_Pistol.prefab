@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 4
+  damage: 3
   knockback: 0
   range: 50
   bounces: 2
